@@ -1,0 +1,16 @@
+[
+{
+  "modid": "array_processing",
+  "name": "Array Processing",
+  "description": "A mod which added array processing multiblock structure into the game. Supported machines-like devices from vanilla and other technology mods",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["TuRou"],
+  "credits": "TuRou",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
