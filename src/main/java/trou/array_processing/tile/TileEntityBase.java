@@ -7,7 +7,7 @@ import it.zerono.mods.zerocore.api.multiblock.validation.ValidationError;
 import trou.array_processing.block.BlockArrayWall;
 import trou.array_processing.multiblock.ProcessingArrayController;
 
-public class ProcessingArrayTileEntity extends RectangularMultiblockTileEntityBase {
+public class TileEntityBase extends RectangularMultiblockTileEntityBase {
 
     @Override
     public Class<ProcessingArrayController> getMultiblockControllerType() {

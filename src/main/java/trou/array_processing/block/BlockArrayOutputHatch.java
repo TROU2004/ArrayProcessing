@@ -5,19 +5,19 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import trou.array_processing.tile.TileEntityBase;
+import trou.array_processing.tile.TileArrayItemHatch;
 
 import javax.annotation.Nullable;
 
-public class BlockArrayWall extends BlockStructure{
-    public BlockArrayWall() {
-        super("wall", TileEntityBase.class);
+public class BlockArrayOutputHatch extends BlockStructure{
+    public BlockArrayOutputHatch() {
+        super("output_hatch");
     }
 
     @Nullable
     @Override
     public TileEntity createTileEntity(World world, IBlockState state) {
-        return new TileEntityBase();
+        return new TileArrayItemHatch(true);
     }
 
     @Override

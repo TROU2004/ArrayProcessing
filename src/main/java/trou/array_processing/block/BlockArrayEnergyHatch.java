@@ -5,19 +5,19 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import trou.array_processing.tile.TileEntityBase;
+import trou.array_processing.tile.TileArrayEnergyHatch;
 
 import javax.annotation.Nullable;
 
-public class BlockArrayWall extends BlockStructure{
-    public BlockArrayWall() {
-        super("wall", TileEntityBase.class);
+public class BlockArrayEnergyHatch extends BlockStructure {
+    public BlockArrayEnergyHatch() {
+        super("energy_hatch", TileArrayEnergyHatch.class);
     }
 
     @Nullable
     @Override
     public TileEntity createTileEntity(World world, IBlockState state) {
-        return new TileEntityBase();
+        return new TileArrayEnergyHatch();
     }
 
     @Override
