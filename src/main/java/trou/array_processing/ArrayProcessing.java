@@ -12,11 +12,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 import trou.array_processing.block.BlockArrayGlass;
 import trou.array_processing.block.BlockArrayWall;
+import trou.array_processing.tile.ProcessingArrayTileEntity;
 
-@Mod(modid = ArrayProcessing.MODID, name = ArrayProcessing.NAME, version = ArrayProcessing.VERSION, useMetadata = true, dependencies = "required-after:zerocoreap")
+@Mod(modid = ArrayProcessing.MODID, name = ArrayProcessing.NAME, version = ArrayProcessing.VERSION, useMetadata = true, dependencies = "required-after:zerocore")
 @Mod.EventBusSubscriber(modid = ArrayProcessing.MODID)
 public class ArrayProcessing {
     public static final String MODID = "array_processing";
@@ -50,6 +52,7 @@ public class ArrayProcessing {
     @SubscribeEvent
     public static void registerBlock(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(BLOCK_LIST);
+        GameRegistry.registerTileEntity(ProcessingArrayTileEntity.class, "processing_array");
     }
 
     @SubscribeEvent

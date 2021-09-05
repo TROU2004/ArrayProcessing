@@ -1,8 +1,10 @@
 package it.zerono.mods.zerocore.api.multiblock;
 
-import java.util.Set;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
+import trou.array_processing.multiblock.ProcessingArrayController;
+
+import java.util.Set;
 
 public interface IMultiblockPart {
       boolean isConnected();
@@ -27,7 +29,7 @@ public interface IMultiblockPart {
 
       MultiblockControllerBase createNewMultiblock();
 
-      Class getMultiblockControllerType();
+      Class<ProcessingArrayController> getMultiblockControllerType();
 
       void onAssimilated(MultiblockControllerBase var1);
 

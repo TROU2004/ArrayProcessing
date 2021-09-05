@@ -1,5 +1,7 @@
 # Blocks
-
+itemGroup.array_processing=Array Processing
+tile.array_processing.array_wall.name=Processing Array Case
+tile.array_processing.array_glass.name=Processing Array Glass
 # MultiBlock
 array_processing.multiblock.validation.invalid_block="Block at %1$d, %2$d, %3$d is not valid for the processing array."
 array_processing.multiblock.validation.invalid_block_notwall="Block at %1$d, %2$d, %3$d is not valid for the processing array. Processing array's frame should be array wall."
