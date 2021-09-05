@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(
-      modid = "zerocore",
+      modid = "zerocoreap",
       name = "ZeroCore-AP",
       acceptedMinecraftVersions = "1.12.2",
       dependencies = "required-after:forge@[14.23.5.2847,15.0.0.0);after:cofhcore",
