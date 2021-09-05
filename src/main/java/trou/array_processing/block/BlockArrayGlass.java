@@ -19,11 +19,7 @@ public class BlockArrayGlass extends BlockStructure {
 
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getRenderLayer() {
-        return BlockRenderLayer.CUTOUT;
-    }
-
-    public boolean isFullCube(IBlockState state) {
-        return false;
+        return BlockRenderLayer.CUTOUT_MIPPED;
     }
 
     @Nullable

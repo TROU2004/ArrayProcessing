@@ -10,8 +10,13 @@ import net.minecraft.block.BlockAir;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import trou.array_processing.tile.TileArrayEnergyHatch;
+import trou.array_processing.tile.TileArrayItemHatch;
 
 public class ProcessingArrayController extends RectangularMultiblockControllerBase {
+    private TileArrayItemHatch inputHatch;
+    private TileArrayItemHatch outputHatch;
+    private TileArrayEnergyHatch energyHatch;
     public ProcessingArrayController(World world) {
         super(world);
     }
@@ -22,7 +27,31 @@ public class ProcessingArrayController extends RectangularMultiblockControllerBa
     }
 
     @Override
+    protected boolean isMachineWhole(IMultiblockValidator validatorCallback) {
+        refreshHatches();
+        if (energyHatch != null && inputHatch != null && outputHatch != null) {
+            return true;
+        }
+        validatorCallback.setLastError(new ValidationError("array_processing.multiblock.validation.lack_hatch"));
+        return false;
+    }
+
+    private void refreshHatches() {
+        energyHatch = null;
+        inputHatch = null;
+        outputHatch = null;
+        for (IMultiblockPart part : connectedParts) {
+            if (part instanceof TileArrayEnergyHatch) energyHatch = (TileArrayEnergyHatch) part;
+            if (part instanceof TileArrayItemHatch) {
+                TileArrayItemHatch itemHatch = (TileArrayItemHatch) part;
+                if (itemHatch.output) outputHatch = itemHatch; else inputHatch = itemHatch;
+            }
+        }
+    }
+
+    @Override
     protected void onBlockAdded(IMultiblockPart var1) {
+
     }
 
     @Override
@@ -32,12 +61,12 @@ public class ProcessingArrayController extends RectangularMultiblockControllerBa
 
     @Override
     protected void onMachineAssembled() {
-
+        refreshHatches();
     }
 
     @Override
     protected void onMachineRestored() {
-
+        refreshHatches();
     }
 
     @Override

@@ -6,3 +6,4 @@ tile.array_processing.array_glass.name=处理阵列玻璃
 array_processing.multiblock.validation.invalid_block=在坐标 %1$d, %2$d, %3$d 的方块不能构成处理阵列结构.
 array_processing.multiblock.validation.invalid_block_notwall=在坐标 %1$d, %2$d, %3$d 的方块不能构成处理阵列结构. 处理阵列的框架必须是处理阵列外壳.
 array_processing.multiblock.validation.invalid_block_inner=在坐标 %1$d, %2$d, %3$d 的方块不能构成处理阵列结构. 处理阵列必须中空.
+array_processing.multiblock.validation.lack_hatch=缺失能源仓, 输入仓, 或输出仓.
