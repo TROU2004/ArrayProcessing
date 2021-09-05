@@ -1,7 +1,13 @@
 {
-  "variants": {
-    "normal": {
-      "model": "array_processing:array_glass"
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "textures": {
+      "all": "array_processing:blocks/array_glass"
     }
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{ "transform": "forge:default-block" }]
   }
 }

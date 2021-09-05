@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 public class BlockArrayWall extends BlockStructure{
     public BlockArrayWall() {
-        super("wall", TileEntityBase.class);
+        super("wall");
     }
 
     @Nullable
