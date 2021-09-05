@@ -10,12 +10,9 @@ import net.minecraft.block.BlockAir;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import trou.array_processing.ArrayProcessing;
-import trou.array_processing.block.BlockArrayWall;
-import trou.array_processing.block.BlockStructure;
 
 public class ProcessingArrayController extends RectangularMultiblockControllerBase {
-    protected ProcessingArrayController(World world) {
+    public ProcessingArrayController(World world) {
         super(world);
     }
 
@@ -26,7 +23,6 @@ public class ProcessingArrayController extends RectangularMultiblockControllerBa
 
     @Override
     protected void onBlockAdded(IMultiblockPart var1) {
-
     }
 
     @Override
@@ -36,8 +32,7 @@ public class ProcessingArrayController extends RectangularMultiblockControllerBa
 
     @Override
     protected void onMachineAssembled() {
-        //Created
-        ArrayProcessing.info("A Machine is created");
+
     }
 
     @Override
@@ -98,28 +93,24 @@ public class ProcessingArrayController extends RectangularMultiblockControllerBa
 
     @Override
     protected boolean isBlockGoodForFrame(World world, int x, int y, int z, IMultiblockValidator validator) {
-        if (world.getBlockState(new BlockPos(x, y, z)).getBlock() instanceof BlockArrayWall) return true;
         validator.setLastError(new ValidationError("array_processing.multiblock.validation.invalid_block_notwall", x, y, z));
         return false;
     }
 
     @Override
     protected boolean isBlockGoodForTop(World world, int x, int y, int z, IMultiblockValidator validator) {
-        if (world.getBlockState(new BlockPos(x, y, z)).getBlock() instanceof BlockStructure) return true;
         validator.setLastError(new ValidationError("array_processing.multiblock.validation.invalid_block", x, y, z));
         return false;
     }
 
     @Override
     protected boolean isBlockGoodForBottom(World world, int x, int y, int z, IMultiblockValidator validator) {
-        if (world.getBlockState(new BlockPos(x, y, z)).getBlock() instanceof BlockStructure) return true;
         validator.setLastError(new ValidationError("array_processing.multiblock.validation.invalid_block", x, y, z));
         return false;
     }
 
     @Override
     protected boolean isBlockGoodForSides(World world, int x, int y, int z, IMultiblockValidator validator) {
-        if (world.getBlockState(new BlockPos(x, y, z)).getBlock() instanceof BlockStructure) return true;
         validator.setLastError(new ValidationError("array_processing.multiblock.validation.invalid_block", x, y, z));
         return false;
     }

@@ -1,42 +1,17 @@
 package trou.array_processing.tile;
 
 import it.zerono.mods.zerocore.api.multiblock.MultiblockControllerBase;
-import it.zerono.mods.zerocore.api.multiblock.MultiblockTileEntityBase;
+import it.zerono.mods.zerocore.api.multiblock.rectangular.RectangularMultiblockTileEntityBase;
+import it.zerono.mods.zerocore.api.multiblock.validation.IMultiblockValidator;
+import it.zerono.mods.zerocore.api.multiblock.validation.ValidationError;
+import trou.array_processing.block.BlockArrayWall;
+import trou.array_processing.multiblock.ProcessingArrayController;
 
-public class ProcessingArrayTileEntity extends MultiblockTileEntityBase {
-    @Override
-    public Class getMultiblockControllerType() {
-        return null;
-    }
-
-    @Override
-    public void onMachineAssembled(MultiblockControllerBase var1) {
-
-    }
+public class ProcessingArrayTileEntity extends RectangularMultiblockTileEntityBase {
 
     @Override
-    public void onPreMachineAssembled(MultiblockControllerBase var1) {
-
-    }
-
-    @Override
-    public void onPostMachineAssembled(MultiblockControllerBase var1) {
-
-    }
-
-    @Override
-    public void onMachineBroken() {
-
-    }
-
-    @Override
-    public void onPreMachineBroken() {
-
-    }
-
-    @Override
-    public void onPostMachineBroken() {
-
+    public Class<ProcessingArrayController> getMultiblockControllerType() {
+        return ProcessingArrayController.class;
     }
 
     @Override
@@ -51,6 +26,33 @@ public class ProcessingArrayTileEntity extends MultiblockTileEntityBase {
 
     @Override
     public MultiblockControllerBase createNewMultiblock() {
-        return null;
+        return new ProcessingArrayController(world);
+    }
+
+    @Override
+    public boolean isGoodForFrame(IMultiblockValidator validator) {
+        if (world.getBlockState(pos).getBlock() instanceof BlockArrayWall) return true;
+        validator.setLastError(new ValidationError("array_processing.multiblock.validation.invalid_block_notwall", pos.getX(), pos.getY(), pos.getZ()));
+        return true;
+    }
+
+    @Override
+    public boolean isGoodForSides(IMultiblockValidator validator) {
+        return true;
+    }
+
+    @Override
+    public boolean isGoodForTop(IMultiblockValidator validator) {
+        return true;
+    }
+
+    @Override
+    public boolean isGoodForBottom(IMultiblockValidator validator) {
+        return true;
+    }
+
+    @Override
+    public boolean isGoodForInterior(IMultiblockValidator validator) {
+        return false;
     }
 }
