@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 public class BlockArrayEnergyHatch extends BlockStructure {
     public BlockArrayEnergyHatch() {
-        super("energy_hatch", TileArrayEnergyHatch.class);
+        super("energy_hatch");
     }
 
     @Nullable

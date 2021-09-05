@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 public class BlockArrayInputHatch extends BlockStructure{
     public BlockArrayInputHatch() {
-        super("input_hatch", TileArrayItemHatch.class);
+        super("input_hatch");
     }
 
     @Nullable
