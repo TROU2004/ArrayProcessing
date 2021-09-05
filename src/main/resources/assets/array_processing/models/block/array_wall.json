@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "array_processing:blocks/array_processing:array_wall",
+    "down": "array_processing:blocks/array_processing:array_wall",
+    "up": "array_processing:blocks/array_processing:array_wall",
+    "north": "array_processing:blocks/array_processing:array_wall",
+    "south": "array_processing:blocks/array_processing:array_wall",
+    "west": "array_processing:blocks/array_processing:array_wall",
+    "east": "array_processing:blocks/array_processing:array_wall"
+  }
+}

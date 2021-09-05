@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "array_processing:array_wall"
+    }
+  }
+}
