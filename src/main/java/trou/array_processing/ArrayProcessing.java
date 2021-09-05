@@ -18,7 +18,7 @@ import trou.array_processing.block.BlockArrayGlass;
 import trou.array_processing.block.BlockArrayWall;
 import trou.array_processing.tile.ProcessingArrayTileEntity;
 
-@Mod(modid = ArrayProcessing.MODID, name = ArrayProcessing.NAME, version = ArrayProcessing.VERSION, useMetadata = true, dependencies = "required-after:zerocore")
+@Mod(modid = ArrayProcessing.MODID, name = ArrayProcessing.NAME, version = ArrayProcessing.VERSION, useMetadata = true, dependencies = "required-after:zerocoreap")
 @Mod.EventBusSubscriber(modid = ArrayProcessing.MODID)
 public class ArrayProcessing {
     public static final String MODID = "array_processing";

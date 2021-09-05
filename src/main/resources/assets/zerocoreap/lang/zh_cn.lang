@@ -5,6 +5,7 @@ zerocore:api.multiblock.validation.invalid_part=位于 %1$d, %2$d, %3$d 的部�
 zerocore:api.multiblock.validation.invalid_part_for_bottom=位于 %1$d, %2$d, %3$d 的方块不是有效的机器底面
 zerocore:api.multiblock.validation.invalid_part_for_frame=位于 %1$d, %2$d, %3$d 的方块不是有效的机器框架
 zerocore:api.multiblock.validation.invalid_part_for_interior=位于 %1$d, %2$d, %3$d 的方块不是有效的机器内部
+zerocore:api.multiblock.validation.reactor.invalid_part_for_interior=位于 %1$d, %2$d, %3$d 的方块不是有效的机器内部
 zerocore:api.multiblock.validation.invalid_part_for_sides=位于 %1$d, %2$d, %3$d 的方块不是有效的机器侧面
 zerocore:api.multiblock.validation.invalid_part_for_top=位于 %1$d, %2$d, %3$d 的方块不是有效的机器顶面
 zerocore:api.multiblock.validation.machine_too_large=机器过大，在 %2$s 轴不能超过 %1$d 个方块。
