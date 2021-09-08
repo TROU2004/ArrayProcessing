@@ -1,0 +1,7 @@
+{
+	"parent": "array_processing:block/blockmodel_overlay_all",
+	"textures": {
+		"bg_all": "array_processing:blocks/array_block_base",
+		"ov_all": "array_processing:blocks/array_energyhatch_ov"
+	}
+}
